@@ -120,7 +120,10 @@ function Timer() {
       workMin.innerHTML = 0;
       workSec.innerHTML = 3;
       cycle.innerHTML++;
-    } else {
+      if (cycle.innerHTML !== 0 && cycle.innerHTML % 2 == 0) {
+        flag = 2;
+      }
+    } else if (flag == 1) {
       flag = 0;
       for (let i = 0; i < 3; i++) {
         if (i === 0) processes[i].classList.add('active');
@@ -129,8 +132,7 @@ function Timer() {
       workMin.innerHTML = 0;
       workSec.innerHTML = 3;
     }
-    let noc = cycle.innerHTML%2;
-    if (cycle.innerHTML !== 0 && noc == 0 ) {
+    if (flag == 2) {
       flag = 1;
       for (let i = 0; i < 3; i++) {
         if (i === 2) processes[i].classList.add('active');
