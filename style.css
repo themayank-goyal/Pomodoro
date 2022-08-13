@@ -6,11 +6,11 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
- 
+
 html {
   font-size: 62.5%;
 }
@@ -20,10 +20,10 @@ body {
   background-color: #1864ab;
   background-color: #1971c2;
   font-family: 'Josefin Sans', sans-serif;
-  height: 100vh;   
+  height: 100vh;
 }
 
-.logo{
+.logo {
   position: absolute;
   bottom: 0;
   left: -20rem;
@@ -37,11 +37,11 @@ h1 {
   font-size: 2.4rem;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
-.process{
+.process {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -51,9 +51,7 @@ h2{
   padding: 1rem 2rem;
   margin-bottom: 5rem;
   margin-top: 0.5rem;
-  
 }
-
 
 .step {
   padding: 1rem 2rem;
@@ -65,14 +63,15 @@ h2{
   font-weight: bold;
 }
 
-.process__pomodoro active{
+.process__pomodoro active {
   flex: 0 0 100%;
 }
 
 .active {
   background-color: cyan;
   opacity: 1;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
 .timer {
@@ -88,15 +87,13 @@ h2{
   border-radius: 18px;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
-  box-shadow:
-    inset 0 0 50px #fff,
-    inset -20px 0 80px #0ff,  /* inner right cyan short */
-    inset -20px 0 300px #0ff, /* inner right cyan broad */
-    0 0 50px #fff,            /* outer white */
-    10px 0 80px #0ff; 
+  box-shadow: inset 0 0 50px #fff, inset -20px 0 80px #0ff,
+    /* inner right cyan short */ inset -20px 0 300px #0ff,
+    /* inner right cyan broad */ 0 0 50px #fff,
+    /* outer white */ 10px 0 80px #0ff;
 }
 
-.work{
+.work {
   font-size: 1.8rem;
 }
 
@@ -109,19 +106,19 @@ h2{
   width: 20rem;
 }
 
-.work{
+.work {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.work__min{
+.work__min {
   font-size: 15rem;
 }
 .colon {
   font-size: 15rem;
 }
-.work__sec{
+.work__sec {
   font-size: 15rem;
 }
 
@@ -145,10 +142,13 @@ button {
   color: #fff;
   color: cyan;
   letter-spacing: 2px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-color: #111;
 }
-
 
 .settings {
   position: absolute;
@@ -156,11 +156,12 @@ button {
   right: 0;
   width: 3rem;
   margin: 2rem;
+  cursor: pointer;
 }
 
 .settings__popup {
   background-color: #111;
- g width: 65vh;
+  width: 65vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
@@ -176,6 +177,12 @@ button {
   color: black;
 }
 
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 label {
   font-size: 2rem;
   color: white;
@@ -186,8 +193,8 @@ input {
   font-size: 2rem;
 }
 
-.setting >select{
-  width: 60%;
+.setting > select {
+  width: 55%;
   padding: 1rem;
   border-radius: 11px;
   font-size: 1.6rem;
@@ -208,4 +215,53 @@ input {
   height: 4rem;
   border-radius: 50%;
   margin-left: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 720px) {
+  .app{
+    position: relative;
+  }
+  .timer{
+    position: static;
+  }
+  .buttons{
+    font-size: 1.8rem;
+  }
+  .step{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .settings {
+    top: 0;
+    right: 0;
+  }
+  .process {
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+  }
+  .buttons {
+    flex-direction: column;
+    
+  }
+  button {
+    width: 100%;
+  }
+  .cycle {
+    width: 100%;
+    border-radius: 100px;
+  }
+  .work >div{
+    font-size: 6.5rem;
+  }
 }

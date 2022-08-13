@@ -17,7 +17,7 @@ const stop = document.querySelector('.btnStop');
 const processes = document.querySelectorAll('.step');
 let sound = new Audio('./assets/sounds/Nature.mp3');
 const wdSound = new Audio('./assets/sounds/workTimerOver.mp3');
-
+const cancel = document.querySelector('.cancel');
 const settingIcon = document.querySelector('.settings');
 
 const settings = document.querySelector('.settings__popup');
@@ -45,6 +45,11 @@ function themeOption() {
 }
 
 let startTimer = undefined;
+
+cancel.addEventListener('click', function(){
+  timerApp.classList.remove('hide');
+  settings.classList.add('hide');
+})
 
 btnDone.addEventListener('click', function () {
   timerApp.classList.remove('hide');
