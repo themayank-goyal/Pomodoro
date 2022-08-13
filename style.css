@@ -1,0 +1,195 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ 
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+ 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* background-image: url(./assets/images/q.png); */
+  background-color: #1864ab;
+  background-color: #1971c2;
+  font-family: 'Josefin Sans', sans-serif;
+  height: 100vh;   
+}
+
+.logo{
+  position: absolute;
+  bottom: 0;
+  left: -20rem;
+  width: 30%;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  letter-spacing: 2px;
+  font-size: 2.4rem;
+}
+
+h2{
+  text-align: center;
+}
+
+.process{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #111;
+  /* background-color: white; */
+  border-radius: 100px;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
+  margin-top: 0.5rem;
+  
+}
+
+
+.step {
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  border-radius: 100px;
+  background-color: #fff;
+  opacity: 0.1;
+  color: #111;
+  font-weight: bold;
+}
+
+.process__pomodoro active{
+  flex: 0 0 100%;
+}
+
+.active {
+  background-color: cyan;
+  opacity: 1;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.timer {
+  position: relative;
+  background-color: #ff825b;
+  /* background-color: #339af0; */
+  background-color: #1864ab;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  padding: 1rem;
+  border-radius: 18px;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    10px 0 80px #0ff; 
+}
+
+.work{
+  font-size: 1.8rem;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 20rem;
+  width: 20rem;
+}
+
+.work{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work__min{
+  font-size: 15rem;
+}
+.colon {
+  font-size: 15rem;
+}
+.work__sec{
+  font-size: 15rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  color: cyan;
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: #111;
+}
+
+
+.settings {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3rem;
+  margin: 2rem;
+}
+
+.settings__popup {
+  border: 2px solid yellow;  
+  width: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+label {
+  font-size: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.setting >select{
+  width: 60%;
+  padding: 1rem;
+  border-radius: 11px;
+  font-size: 1.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.cycle {
+  font-size: 4rem;
+}
