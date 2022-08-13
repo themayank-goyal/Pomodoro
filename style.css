@@ -191,6 +191,9 @@ label {
 input {
   padding: 0.5rem;
   font-size: 2rem;
+  border-radius: 11px;
+  border: none;
+  text-align: center;
 }
 
 .setting > select {
@@ -263,5 +266,14 @@ input[type=number] {
   }
   .work >div{
     font-size: 6.5rem;
+  }
+  .settings__popup{
+    width: 60vw;
+  }
+  input {
+    width: 100%;
+  }
+  .setting {
+    flex-direction: column;
   }
 }
