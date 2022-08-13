@@ -159,19 +159,26 @@ button {
 }
 
 .settings__popup {
-  border: 2px solid yellow;  
-  width: 60vh;
+  background-color: #111;
+ g width: 65vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  border-radius: 1rem;
+}
+
+.setting__btn {
+  background-color: white;
+  color: black;
 }
 
 label {
   font-size: 2rem;
+  color: white;
 }
 
 input {

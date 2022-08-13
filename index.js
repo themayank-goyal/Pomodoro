@@ -27,9 +27,9 @@ const selectBreakTime = document.getElementById('selectBT');
 const selectLongBreakTime = document.getElementById('selectLBT');
 const btnDone = document.querySelector('.done');
 
-let wt = 1;
-let bt = 1;
-let lbt = 1;
+let wt = 25;
+let bt = 5;
+let lbt = 15;
 
 function time() {
   wt = selectWorkTime.value;
@@ -53,6 +53,8 @@ btnDone.addEventListener('click', function () {
   workSec.innerHTML = '00';
   breakMin.innerHTML = bt;
   breakSec.innerHTML = '00';
+  lbreakMin.innerHTML = lbt;
+  lbreakSec.innerHTML = '00';
 });
 
 settingIcon.addEventListener('click', function () {
@@ -102,6 +104,7 @@ function ResetMethod() {
   breakSec.innerHTML = '00';
   lbreakMin.innerHTML = lbt;
   lbreakSec.innerHTML = '00';
+  cycle.innerHTML = 0;
 }
 let flag = 0;
 function Timer() {
@@ -117,8 +120,8 @@ function Timer() {
         if (i === 1) processes[i].classList.add('active');
         else processes[i].classList.remove('active');
       }
-      workMin.innerHTML = 0;
-      workSec.innerHTML = 3;
+      workMin.innerHTML = bt;
+      workSec.innerHTML = 0;
       cycle.innerHTML++;
       if (cycle.innerHTML !== 0 && cycle.innerHTML % 2 == 0) {
         flag = 2;
@@ -129,8 +132,8 @@ function Timer() {
         if (i === 0) processes[i].classList.add('active');
         else processes[i].classList.remove('active');
       }
-      workMin.innerHTML = 0;
-      workSec.innerHTML = 3;
+      workMin.innerHTML = wt;
+      workSec.innerHTML = 0;
     }
     if (flag == 2) {
       flag = 1;
@@ -138,8 +141,8 @@ function Timer() {
         if (i === 2) processes[i].classList.add('active');
         else processes[i].classList.remove('active');
       }
-      workMin.innerHTML = 0;
-      workSec.innerHTML = 3;
+      workMin.innerHTML = lbt;
+      workSec.innerHTML = 0;
     }
   }
 }
