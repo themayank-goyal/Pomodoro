@@ -4,12 +4,6 @@ const timerApp = document.querySelector('.timer');
 const cycle = document.querySelector('.cycle');
 const workMin = document.querySelector('.work__min');
 const workSec = document.querySelector('.work__sec');
-const breakMin = document.querySelector('.break__min');
-const breakSec = document.querySelector('.break__sec');
-const breakDiv = document.querySelector('.break');
-const lbreakMin = document.querySelector('.lbreak__min');
-const lbreakSec = document.querySelector('.lbreak__sec');
-const lbreakDiv = document.querySelector('.lbreak');
 const workDiv = document.querySelector('.work');
 const start = document.querySelector('.btnStart');
 const reset = document.querySelector('.btnReset');
@@ -56,10 +50,6 @@ btnDone.addEventListener('click', function () {
   settings.classList.add('hide');
   workMin.innerHTML = wt;
   workSec.innerHTML = '00';
-  breakMin.innerHTML = bt;
-  breakSec.innerHTML = '00';
-  lbreakMin.innerHTML = lbt;
-  lbreakSec.innerHTML = '00';
 });
 
 settingIcon.addEventListener('click', function () {
@@ -78,12 +68,7 @@ reset.addEventListener('click', ResetMethod);
 function StartMethod() {
   sound = new Audio(`./assets/sounds/${theme}.mp3`);
   if (startTimer === undefined) {
-    sound.play();
     startTimer = setInterval(Timer, 1000);
-    for (let i = 0; i < 3; i++) {
-      if (i === 0) processes[i].classList.add('active');
-      else processes[i].classList.remove('active');
-    }
   } else {
     alert('timer is already running');
   }
@@ -105,14 +90,11 @@ function ResetMethod() {
   }
   workMin.innerHTML = wt;
   workSec.innerHTML = '00';
-  breakMin.innerHTML = bt;
-  breakSec.innerHTML = '00';
-  lbreakMin.innerHTML = lbt;
-  lbreakSec.innerHTML = '00';
   cycle.innerHTML = 0;
 }
 let flag = 0;
 function Timer() {
+  sound.play();
   if (workSec.innerHTML != 0) {
     workSec.innerHTML--;
   } else if (workMin.innerHTML != 0) {
